@@ -25,10 +25,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s1[j] && ft_strchr(set, s1[j]) != '\0')
+	while (s1[j] && ft_strchr(set, s1[j]) != (void *)0)
 		j++;
 	k = ft_strlen((char *) s1);
-	while (k > j && ft_strchr(set, s1[k - 1]) != '\0')
+	while (k > j && ft_strchr(set, s1[k - 1]) != (void *)0)
 		k--;
 	buffer = (char *) malloc(sizeof(*s1) * (k - j + 1));
 	if (!buffer)
