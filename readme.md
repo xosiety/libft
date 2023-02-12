@@ -6,19 +6,26 @@ necessarie per il regolare svolgimento dei progetti futuri
 Dichiarare variabili globali sarà proibito e ogni file dovrà compilare con le flag  -Wall, -Wextra -Werror
 
 l'intera libreria è stata realizzata con l'aiuto dei commenti del collega pbie
+
 https://github.com/pbie42/libft42commented
 
 e testata utilizzando il supreme-tester di ffrau
+
 https://github.com/FranFrau/Supreme-Tester-Libft
 
 ci tengo inoltre a ringraziare i compagni che piú mi sono stati appresso
 senza i quali non avrei saputo che pesci prendere
+
 https://github.com/stenterello
+
 https://github.com/mcapalbo	
+
 https://github.com/lmorelli333
+
 https://github.com/misidori
 
-qui sotto gli appunti per alcune delle funzioni piú ostiche
+qui sotto gli appunti per alcune delle funzioni piú ostiche, cerchero di aggiornare questa lista 
+di tanto in tanto!
 
 strjoin assegna memoria sufficente e ritorna una nuova stringa terminata da "\0" data dal risultato 
 del concatenamento dei parametri s1 e s2.
