@@ -1,93 +1,63 @@
 # 📖 libft
-####  Your very first own library
+####  Our very first own library
 
 ------------
 
-> La programmazione in C pu&ograve;
->essere molto noiosa quando non si ha accesso alle funzioni standard.
->Questo progetto riguarda la comprensione di queste funzioni,
->l'implementazione e l'approfondimento del loro utilizzo.
+Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento delle funzioni standard in C.
 
 ## 💡 About the project
 
 > Dichiarare variabili globali sarà proibito e ogni file dovrà compilare con le flag  -Wall, -Wextra -Werror
 
-## 📋 Testing
+> Il Makefile deve contenere almeno le regole $(NAME), all, clean, fclean e re.
 
-> l'intera libreria è stata realizzata con l'aiuto dei commenti del collega **[pbie](https://github.com/pbie42/libft42commented)**
->e testata utilizzando il supreme-tester di **[ffrau](https://github.com/FranFrau/Supreme-Tester-Libft)**
+> Dobbiamo usare il comando **ar** per creare la libreria. L'uso del comando libtool è proibito.
 
 ------------
 
 ## 🛠️ Funzioni
 
-> qui sotto gli appunti per alcune delle funzioni piú ostiche, cerchero di aggiornare questa lista
->di tanto in tanto!
+ ##### Qui sotto gli appunti per alcune delle funzioni:
 
-###### ft_memset scrive len byte del valore c (convertito in unsigned char) nella stringa b
+* **bzero** scrive n byte di valore zero nella stringa s
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### ft_bzero scrive n byte di valore zero nella stringa s
+* **split** divide una stringa in base ad un carattere e ritorna un array di stringhe
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### split è una funzione che divide una stringa in base ad un carattere e ritorna un array di stringhe
+* **strnstr** ritorna un puntatore alla prima occorrenza della stringa needle nella stringa haystack
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strchr ritorna un puntatore alla prima occorrenza del carattere c nella stringa s
+* **strlcat** concatena la stringa src alla stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
 
-    iniziamo creando un puntatore a char che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strrchr ritorna un puntatore all'ultima occorrenza del carattere c nella stringa s
+* **strlcpy** copia la stringa src nella stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
 
-    iniziamo creando un puntatore a char che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strnstr ritorna un puntatore alla prima occorrenza della stringa needle nella stringa haystack
+* **substr** alloca (con malloc(3)) e ritorna una stringa che è il risultato della copia della stringa s a partire dall'indice start per un massimo di len caratteri.
 
-    iniziamo creando un puntatore a char che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strlcat concatena la stringa src alla stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
+* **strtrim** rimuove i caratteri specificati dalla stringa iniziale e finale
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strlcpy copia la stringa src nella stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
+* **memset** scrive len byte del valore c (convertito in unsigned char) nella stringa b
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### ft_substr alloca (con malloc(3)) e ritorna una stringa che è il risultato della copia della stringa s a partire dall'indice start per un massimo di len caratteri.
+* **memcpy** copia un numero n di bytes dalla memoria src alla memoria dst. in caso queste due coincidessero la funzione usa memmove. questa funzione ritorna il valore originari di dst
 
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
 
-###### strjoin assegna memoria sufficente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.
+* **memmove** copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao
+
+
+>**memcmp** prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
+
+	iniziamo creando due puntatori a char nei quali casteremo le nostre stringhe e un contatore size_t
+	che useremo per comparare entrambi i paramentri s1 e s2 castati a loro volta dentro i nuovi puntatori a char
+ 	vogliamo che il nostro loop continui fintanto che i < n ma non appena il carattere in str1 differisce da str2 vogliamo che
+  	che la funzione ritorni la differenza in byte tra i due unsigned char.
+  	una volta raggiunta la nostra n ritorniamo 0 */
+
+> **strjoin** assegna memoria sufficiente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.
 
 	iniziamo dichiarando due contatori per muoverci attraverso le stringhe
 	e una terza variabile a cui assegneremo la nostra memoria per poter tornare
@@ -107,14 +77,7 @@
 	la nostra posizione i dal loop precedente e conteremo s2 sulla nostra j
 	una volta raggiunta la fine di s2 aggiungiamo il "\0" e torniamo la nostra freschissima str   
 
-###### strtrim rimuove i caratteri specificati dalla stringa iniziale e finale
-
-    iniziamo creando una variabile size_t che useremo per muoverci all'interno della nostra stringa
-    creiamo un loop che continuerà fintanto che il nostro puntatore a char non sarà uguale a null
-    quando il nostro puntatore a char sarà uguale a c ritorniamo il nostro puntatore a char
-    altrimenti incrementiamo il nostro puntatore a char e ripetiamo il loop
-
-###### atoi converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10
+> **atoi** converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10
 
 	la prima variabile conterrà il nostro risultato, usiamo long per
 	garantire abbastanza spazio: da -2147483647 a 2147483647
@@ -135,7 +98,7 @@
 	il valore asci del carattere corrente.
 	Il loop finisce una volta incontrato un carattere non compreso tra 0 e 9
 
-###### itoa assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi
+> **itoa** assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi
 
 	impostiamo la nostra str al valore di strjoin con parametro
 	e chiudiamo la ricorsiva con un -n in modo da rendere positivi (^_^) gli int
@@ -148,86 +111,59 @@
 	
 	fintanto che stiamo chiamando itoa ancora e ancora, questo dividerà i nostri int per 10,
 	salverà il risultato e inizierà la funzione di nuovo fino a raggiungere
-	il primissimo o qualsivoglia ultimo numero del nostro int  ¯\_(ツ)_/¯  
-
-###### memcmp prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
-
-	iniziamo creando due puntatori a char nei quali casteremo le nostre stringhe e un contatore size_t
-	che useremo per comparare entrambi i paramentri s1 e s2 castati a loro volta dentro i nuovi puntatori a char
- 	vogliamo che il nostro loop continui fintanto che i < n ma non appena il carattere in str1 differisce da str2 vogliamo che
-  	che la funzione ritorni la differenza in byte tra i due unsigned char.
-  	una volta raggiunta la nostra n ritorniamo 0 */
-
-###### memcpy copia un numero n di bytes dalla memoria src alla memoria dst. in caso queste due coincidessero la funzione usa memmove. questa funzione ritorna il valore originari di dstl
-
-	iniziamo creando tre variabili, la prima come contatore le altre sono puntatori a char nei quali castiamo dst e src.
-	il loop continuerà a scrivere s[i] all'interno di d[i] fintato che il nostro i è minore di size_t n 
-
-###### memmove copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao
-
-	iniziamo creando una variabile tmp che useremo per archiviare i bytes presenti in src
-	per poi copiarli all'interno di dst prima però collochiamo la memoria per tmp
-	in modo che possa ospitare tutta la stringa src. se questo malloc fallisse ritorna null
-	ora possiamo richiamare memcpy, riallocare entrambe le stringhe
-	per poi liberare la memoria da tmp e ritornare la nostra dst+
+	il primissimo o qualsivoglia ultimo numero del nostro int  ¯\_(ツ)_/¯
 
 ------------
 
 ## ✅ Bonus part
 
-> le liste sono una struttura dati molto utilizzata in programmazione, 
-> consistono in una sequenza di elementi che possono essere di qualsiasi tipo, 
-> ogni elemento è collegato al successivo tramite un puntatore, il primo 
-> elemento della lista è chiamato testa e l'ultimo elemento è chiamato coda, 
-> ogni elemento della lista è chiamato nodo. 
-> Le liste possono essere utilizzate per implementare le strutture dati come 
-> le pile, le tabelle hash, le tabelle di simboli, gli insiemi, ecc.
+Le funzioni per manipolare la memoria e le stringhe sono molto utili. 
+Ma presto scoprirai che manipolare le liste è ancora più utile.
 
-###### lstnew crea un nuovo elemento di una lista
+> Ogni elemento è collegato al successivo tramite un **puntatore**, il primo elemento della lista è chiamato testa e l'ultimo elemento è chiamato coda, ogni elemento della lista è chiamato **nodo**.
 
-    iniziamo creando una nuova variabile di tipo t_list
-    controlliamo che il nostro parametro content non sia null
-    assegnamo il valore del nostro parametro content alla nostra variabile new
-    ritorniamo la nostra variabile new
+* **lstadd_front** aggiunge l'elemento new all'inizio della lista.
 
-###### lstdelone elimina un elemento di una lista
 
-    iniziamo creando una nuova variabile di tipo t_list
-    controlliamo che il nostro parametro lst->content non sia null
-    liberiamo la memoria del nostro parametro lst->content
-    assegnamo NULL alla nostra variabile lst
+* **lstsize** conta il numero di elementi in una lista.
 
-###### lstadd aggiunge un elemento all'inizio della lista
 
-    iniziamo creando una nuova variabile di tipo t_list
-    controlliamo che il nostro parametro alst non sia null
-    assegnamo il valore del nostro parametro new alla nostra variabile tmp
-    assegnamo il valore della nostra variabile tmp alla nostra variabile alst
+* **lstlast** restituisce l'ultimo elemento della lista.
 
-###### lstiter itera una lista e applica la funzione f ad ogni elemento
 
-    iniziamo creando una nuova variabile di tipo t_list
-    assegnamo il valore del nostro parametro lst alla nostra variabile tmp
-    finchè tmp non è null applichiamo la funzione f al contenuto di tmp
-    assegnamo il valore del nostro parametro tmp->next alla nostra variabile tmp
+* **lstdelone** prende come parametro l'indirizzo di un elemento e libera la memoria del contenuto dell'elemento con la funzione del e della memoria dell'elemento stesso con free(3)
 
-###### lstmap applica la funzione f ad ogni elemento della lista e crea una nuova lista
 
-    iniziamo creando una nuova variabile di tipo t_list
-    controlliamo che il nostro parametro lst e la nostra f non siano null
-    dopo di che assegnamo il valore del nostro parametro lst alla nostra variabile tmp
-    finchè tmp non è null applichiamo la funzione f al contenuto di tmp
-    infine assegnamo il valore del nostro parametro tmp->next alla nostra variabile tmp
+* **lstclear** prende come parametro l'indirizzo di un elemento e libera la memoria del contenuto di ogni elemento con la funzione del e della memoria di ogni elemento con free(3)
+
+
+* **lstiter** itera la lista lst e applica la funzione f al contenuto di ogni elemento.
+
+
+* **lstnew** alloca (con malloc(3)) e ritorna un nuovo elemento. Il campo content viene inizializzato con il valore del parametro content. Il campo next viene inizializzato a NULL.
+
+> Per rappresentare un nodo della lista useremo la seguente struttura:
+ 
+        typedef struct s_list
+        {
+            void			*content;
+            struct s_list	*next;
+        }	t_list;
+
+> aggiungiendo la sua dichiarazione al nostro file **libft.h**
 
 ------------
 
+## 📋 Testing
+
+L'intera libreria è stata realizzata con l'aiuto dei commenti del collega **[pbie](https://github.com/pbie42/libft42commented)**
+e testata utilizzando il [**supreme-tester di ffrau**](https://github.com/FranFrau/Supreme-Tester-Libft)
+
+> **Stay vigilant**, è importante testare le funzioni anche singlarmente per garantirne il funzionamento!
+
 ## 🪅 Riconoscimenti
 
-> Ci prenderemo del tempo per espandere libft durante tutto l'anno.
->Tuttavia, lavorando su un nuovo progetto, dovremmo assicurarci
->che le funzioni utilizzate siano consentite nelle linee guida.
-
-Inoltre vorrei ringraziare i compagni che piú mi sono stati appresso durante questo progetto
+Ci tengo a ringraziare i compagni che piú mi sono stati appresso durante questo progetto:
 
 * https://github.com/stenterello
 * https://github.com/mcapalbo
@@ -235,4 +171,9 @@ Inoltre vorrei ringraziare i compagni che piú mi sono stati appresso durante qu
 * https://github.com/equadrin
 * https://github.com/TizianoPiras
 * https://github.com/misidori
+
+
+> Ci prenderemo del tempo per espandere libft durante tutto l'anno.
+Tuttavia, lavorando su un nuovo progetto, dovremmo assicurarci
+che le funzioni utilizzate siano consentite nelle linee guida.
 
