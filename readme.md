@@ -49,37 +49,40 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 * **memmove** copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao
 
 
->**memcmp** prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
+* **memcmp** prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
 
-	iniziamo creando due puntatori a char nei quali casteremo le nostre stringhe e un contatore size_t
-	che useremo per comparare entrambi i paramentri s1 e s2 castati a loro volta dentro i nuovi puntatori a char
- 	vogliamo che il nostro loop continui fintanto che i < n ma non appena il carattere in str1 differisce da str2 vogliamo che
-  	che la funzione ritorni la differenza in byte tra i due unsigned char.
-  	una volta raggiunta la nostra n ritorniamo 0 */
 
-> **strjoin** assegna memoria sufficiente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.
+    iniziamo creando due puntatori a char nei quali casteremo le nostre stringhe e un contatore size_t
+    che useremo per comparare entrambi i paramentri s1 e s2 castati a loro volta dentro i nuovi puntatori a char
+    vogliamo che il nostro loop continui fintanto che i < n ma non appena il carattere in str1 differisce da str2 vogliamo che
+    che la funzione ritorni la differenza in byte tra i due unsigned char.
+    una volta raggiunta la nostra n ritorniamo 0 */
 
-	iniziamo dichiarando due contatori per muoverci attraverso le stringhe
-	e una terza variabile a cui assegneremo la nostra memoria per poter tornare
-	le nostre stringhe concatenate
+* **strjoin** assegna memoria sufficiente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.
+
+
+    iniziamo dichiarando due contatori per muoverci attraverso le stringhe
+    una terza variabile a cui assegneremo la nostra memoria per poter tornare
+    le nostre stringhe concatenate
 	
-	impostiamo entrambi i counter a 0 e utiliziamo malloc
-	con una combinazione della nostra funzione strlen, per entrambi i parametri s1 e s2,	
-	in modo da avere la lunghezza totale di *str + 1 per collocare anche il carattere "\0"
-	ritorna NULL in caso malloc fallisse
+    impostiamo entrambi i counter a 0 e utiliziamo malloc
+    con una combinazione della nostra funzione strlen, per entrambi i parametri s1 e s2,	
+    in modo da avere la lunghezza totale di *str + 1 per collocare anche il carattere "\0"
+    ritorna NULL in caso malloc fallisse
 	
-	iniziamo la nostra catena di stringhe partendo da un loop
-	fino alla fine di s1, impostando lo stesso index sia per il nuovo parametro str
-	che per il nostro s1, fatto questo procediamo al prossimo loop
-	questo loop è esattamente come il precedente se non fosse che prende
-	in considerazione anche la nostra variabile j, che ancora equivale a 0.
-	per la nostra neonata str su i + j in questo modo manterremo il loop
-	la nostra posizione i dal loop precedente e conteremo s2 sulla nostra j
-	una volta raggiunta la fine di s2 aggiungiamo il "\0" e torniamo la nostra freschissima str   
+    iniziamo la nostra catena di stringhe partendo da un loop
+    fino alla fine di s1, impostando lo stesso index sia per il nuovo parametro str
+    che per il nostro s1, fatto questo procediamo al prossimo loop
+    questo loop è esattamente come il precedente se non fosse che prende
+    in considerazione anche la nostra variabile j, che ancora equivale a 0.
+    per la nostra neonata str su i + j in questo modo manterremo il loop
+    la nostra posizione i dal loop precedente e conteremo s2 sulla nostra j
+    una volta raggiunta la fine di s2 aggiungiamo il "\0" e torniamo la nostra freschissima str   
 
-> **atoi** converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10
-
-	la prima variabile conterrà il nostro risultato, usiamo long per
+* **atoi** converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10
+   
+	
+    la prima variabile conterrà il nostro risultato, usiamo long per
 	garantire abbastanza spazio: da -2147483647 a 2147483647
 	la seconda variabile verrà utilizzata nel caso in cui il numero in str sia negativo,
 	anch'esso long per poterlo moltiplicare per il nostro risultato
@@ -98,8 +101,9 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 	il valore asci del carattere corrente.
 	Il loop finisce una volta incontrato un carattere non compreso tra 0 e 9
 
-> **itoa** assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi
+* **itoa** assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi
 
+	
 	impostiamo la nostra str al valore di strjoin con parametro
 	e chiudiamo la ricorsiva con un -n in modo da rendere positivi (^_^) gli int
 	infine ci stiamo chiedendo se il nostro int è maggiore di 10 in questo caso
@@ -117,10 +121,10 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 
 ## ✅ Bonus part
 
-Le funzioni per manipolare la memoria e le stringhe sono molto utili. 
+> Le funzioni per manipolare la memoria e le stringhe sono molto utili. 
 Ma presto scoprirai che manipolare le liste è ancora più utile.
 
-> Ogni elemento è collegato al successivo tramite un **puntatore**, il primo elemento della lista è chiamato testa e l'ultimo elemento è chiamato coda, ogni elemento della lista è chiamato **nodo**.
+Ogni lista collega vari punti di memoria tramite un **puntatore**, ogni elemento della lista è chiamato **nodo**.
 
 * **lstadd_front** aggiunge l'elemento new all'inizio della lista.
 
@@ -159,9 +163,14 @@ Ma presto scoprirai che manipolare le liste è ancora più utile.
 L'intera libreria è stata realizzata con l'aiuto dei commenti del collega **[pbie](https://github.com/pbie42/libft42commented)**
 e testata utilizzando il [**supreme-tester di ffrau**](https://github.com/FranFrau/Supreme-Tester-Libft)
 
-> **Stay vigilant**, è importante testare le funzioni anche singlarmente per garantirne il funzionamento!
+🚨 **Stay vigilant**, è importante testare le funzioni singolarmente per garantirne il funzionamento!
 
 ## 🪅 Riconoscimenti
+
+> Ci prenderemo del tempo per espandere libft durante tutto l'anno.
+Tuttavia, lavorando su un nuovo progetto, dovremmo assicurarci
+che le funzioni utilizzate siano consentite nelle linee guida.
+
 
 Ci tengo a ringraziare i compagni che piú mi sono stati appresso durante questo progetto:
 
@@ -172,8 +181,4 @@ Ci tengo a ringraziare i compagni che piú mi sono stati appresso durante questo
 * https://github.com/TizianoPiras
 * https://github.com/misidori
 
-
-> Ci prenderemo del tempo per espandere libft durante tutto l'anno.
-Tuttavia, lavorando su un nuovo progetto, dovremmo assicurarci
-che le funzioni utilizzate siano consentite nelle linee guida.
 
