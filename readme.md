@@ -18,21 +18,21 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 
  ##### Qui sotto gli appunti per alcune delle funzioni:
 
-| Nome        | Funzione                                                                                                          |
-|:------------|-------------------------------------------------------------------------------------------------------------------|
-| **bzero**   | scrive n byte con valore 0 sulla stringa s                                                                        |
-| **split**   | divide uan str in base al parametro c e ritorna una matrice                                                       |
-| **strnstr** | ritorna un puntatore la prima volta che s1 viene individuata in s2                                                |
-| **strlcat** | concatena src su dst per size byte                                                                                |
-| **strlcpy** | scrive src all'interno della stringa dst per n size di byte                                                       |
-| **substr**  | individua e alloca memoria per una copia di s1 per un massimo di len caratteri                                    |
-| **strtrim** | rimuove gli apici di una stringa finche corrispondono ai caratteri passati nei parametri                          |
-| **memset**  | scrive len byte di calore c (convertito unsigned char) sulla stringa b                                            |
-| **memmove** | copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao                   |
+| Nome        | Funzione                                                                                                            |
+|:------------|---------------------------------------------------------------------------------------------------------------------|
+| **bzero**   | scrive n byte con valore 0 sulla stringa s                                                                          |
+| **split**   | divide una stringa in base al parametro c e ritorna una matrice                                                     |
+| **strnstr** | ritorna un puntatore la prima volta che s1 viene individuata in s2                                                  |
+| **strlcat** | concatena src su dst per size byte                                                                                  |
+| **strlcpy** | scrive src all'interno della stringa dst per n size di byte                                                         |
+| **substr**  | individua e alloca memoria per una copia di s1 per un massimo di len caratteri                                      |
+| **strtrim** | rimuove gli apici di una stringa finche corrispondono ai caratteri passati nei parametri                            |
+| **memset**  | scrive len byte di calore c (convertito unsigned char) sulla stringa b                                              |
+| **memmove** | copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao                     |
 | **memcpy**  | copia un numero n di byters dalla memoria src alla memoria dst, questa funzione riporta il valore originario di dst |
+| **memcmp**  | prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche |
 
 
-* **memcmp** prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
 
 
     iniziamo creando due puntatori a char nei quali casteremo le nostre stringhe e un contatore size_t
@@ -41,7 +41,8 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
     che la funzione ritorni la differenza in byte tra i due unsigned char.
     una volta raggiunta la nostra n ritorniamo 0 */
 
-* **strjoin** assegna memoria sufficiente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.
+| **strjoin**    | assegna memoria sufficiente e ritorna una nuova stringa terminata da "\0" data dal risultato del concatenamento dei parametri s1 e s2.|
+|-----|-----|
 
 
     iniziamo dichiarando due contatori per muoverci attraverso le stringhe
@@ -62,8 +63,8 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
     la nostra posizione i dal loop precedente e conteremo s2 sulla nostra j
     una volta raggiunta la fine di s2 aggiungiamo il "\0" e torniamo la nostra freschissima str   
 
-* **atoi** converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10
-   
+| **atoi**  | converte una stringa di caratteri char ad int cercando al suo interno ogni cifra da 0 a 9 trascrivendo il suo valore in ascii e moltiplicandolo per 10 |
+|-----------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
 	
     la prima variabile conterrà il nostro risultato, usiamo long per
 	garantire abbastanza spazio: da -2147483647 a 2147483647
@@ -84,7 +85,9 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 	il valore asci del carattere corrente.
 	Il loop finisce una volta incontrato un carattere non compreso tra 0 e 9
 
-* **itoa** assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi
+|   **itoa**   |  assegna memoria e ritorna una freschissima stringa di caratteri equivalente ad un int passato come parametro, lo stesso vale per i numeri negativi|
+|-----|-----|
+
 
 	
 	impostiamo la nostra str al valore di strjoin con parametro
