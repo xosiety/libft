@@ -1,9 +1,8 @@
 # 📖 libft
 ####  Our very first own library
+Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento delle funzioni standard in C.
 
 ------------
-
-Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento delle funzioni standard in C.
 
 ## 💡 About the project
 
@@ -19,34 +18,18 @@ Questo progetto riguarda la comprensione, l'implementazione e l'approfondimento 
 
  ##### Qui sotto gli appunti per alcune delle funzioni:
 
-* **bzero** scrive n byte di valore zero nella stringa s
-
-
-* **split** divide una stringa in base ad un carattere e ritorna un array di stringhe
-
-
-* **strnstr** ritorna un puntatore alla prima occorrenza della stringa needle nella stringa haystack
-
-
-* **strlcat** concatena la stringa src alla stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
-
-
-* **strlcpy** copia la stringa src nella stringa dst di dimensione size in modo che la stringa dst abbia una dimensione totale di size - 1 e che la stringa dst sia terminata da un null byte ('\0')
-
-
-* **substr** alloca (con malloc(3)) e ritorna una stringa che è il risultato della copia della stringa s a partire dall'indice start per un massimo di len caratteri.
-
-
-* **strtrim** rimuove i caratteri specificati dalla stringa iniziale e finale
-
-
-* **memset** scrive len byte del valore c (convertito in unsigned char) nella stringa b
-
-
-* **memcpy** copia un numero n di bytes dalla memoria src alla memoria dst. in caso queste due coincidessero la funzione usa memmove. questa funzione ritorna il valore originari di dst
-
-
-* **memmove** copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao
+| Nome        | Funzione                                                                                                          |
+|:------------|-------------------------------------------------------------------------------------------------------------------|
+| **bzero**   | scrive n byte con valore 0 sulla stringa s                                                                        |
+| **split**   | divide uan str in base al parametro c e ritorna una matrice                                                       |
+| **strnstr** | ritorna un puntatore la prima volta che s1 viene individuata in s2                                                |
+| **strlcat** | concatena src su dst per size byte                                                                                |
+| **strlcpy** | scrive src all'interno della stringa dst per n size di byte                                                       |
+| **substr**  | individua e alloca memoria per una copia di s1 per un massimo di len caratteri                                    |
+| **strtrim** | rimuove gli apici di una stringa finche corrispondono ai caratteri passati nei parametri                          |
+| **memset**  | scrive len byte di calore c (convertito unsigned char) sulla stringa b                                            |
+| **memmove** | copia len bytes da src a dst. le due stringe devono sovrapporsi in maniera non distruttiva lmao                   |
+| **memcpy**  | copia un numero n di byters dalla memoria src alla memoria dst, questa funzione riporta il valore originario di dst |
 
 
 * **memcmp** prende due stringhe di n caratteri e ritorna 0 se sono identiche altrimenti la differenza unsigned tra i primi due byte che differiscono le stringhe di 0 byte sono sempre identiche
@@ -126,25 +109,15 @@ Ma presto scoprirai che manipolare le liste è ancora più utile.
 
 Ogni lista collega vari punti di memoria tramite un **puntatore**, ogni elemento della lista è chiamato **nodo**.
 
-* **lstadd_front** aggiunge l'elemento new all'inizio della lista.
-
-
-* **lstsize** conta il numero di elementi in una lista.
-
-
-* **lstlast** restituisce l'ultimo elemento della lista.
-
-
-* **lstdelone** prende come parametro l'indirizzo di un elemento e libera la memoria del contenuto dell'elemento con la funzione del e della memoria dell'elemento stesso con free(3)
-
-
-* **lstclear** prende come parametro l'indirizzo di un elemento e libera la memoria del contenuto di ogni elemento con la funzione del e della memoria di ogni elemento con free(3)
-
-
-* **lstiter** itera la lista lst e applica la funzione f al contenuto di ogni elemento.
-
-
-* **lstnew** alloca (con malloc(3)) e ritorna un nuovo elemento. Il campo content viene inizializzato con il valore del parametro content. Il campo next viene inizializzato a NULL.
+| Lista         | Funzione                                                                 |
+|---------------|--------------------------------------------------------------------------|
+| **lstadd**    | aggiungono un elemento new all'inizio o alla fine della lista            |
+| **lstsize**   | conta il numero di elementi in una lista.                                |
+| **lstlast**   | restituisce l'ultimo elemento della lista.                               |
+| **lstdelone** | prende come parametro l'indirizzo di un elemento e ne libera la memoria  |
+| **lstclear**  | libera la memoria di ogni nodo                                           |
+| **lstiter**   | scorre attraverso lst e applica la funzione f al contenuto di ogni nodo. |
+| **lstnew**    | alloca memoria e ritorna un nuovo nodo.                                  |
 
 > Per rappresentare un nodo della lista useremo la seguente struttura:
  
