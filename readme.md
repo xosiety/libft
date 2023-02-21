@@ -91,7 +91,7 @@ Ci tengo a ringraziare i compagni che piú mi sono stati appresso durante questo
 * https://github.com/misidori
 
 </details>
-Up
+
 > Ci prenderemo del tempo per espandere libft durante tutto l'anno.
 Tuttavia, lavorando su un nuovo progetto, dovremmo assicurarci
 che le funzioni utilizzate siano consentite nelle linee guida.
